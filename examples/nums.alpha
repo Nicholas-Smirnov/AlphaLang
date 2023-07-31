@@ -1,0 +1,35 @@
+nums := [1, 2, 3, 4]
+
+// good example of how to use the language.
+
+while True
+
+    log "------------------------------"
+    log "------------------------------"
+
+    log "What would you like to do? "
+    log ""
+    log f"Current List: {nums}" 
+    log ""
+    log "1. Add a number to the list. "
+    log "2. Remove a number from the list. "
+    log "3. Exit the program. "
+    log ""
+
+    userChoice :int= userInput("Your choice: ")
+
+    if userChoice == 1
+        num :int= userInput("Enter a number to add to the list: ")
+        nums := add(nums, num)
+    else if userChoice == 2
+        num :int= userInput("Enter the index of the number to remove from the list: ")
+        nums := remove(nums, num)
+    else if userChoice == 3
+        log "Goodbye!"
+        :exit:
+    else
+        log "Invalid choice. Please try again."
+        writeFile("test.txt", nums.toString())
+        log ""
+    end
+end

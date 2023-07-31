@@ -1,0 +1,2 @@
+# AlphaLang
+Minimalistic programming language.

@@ -1,0 +1,12 @@
+class Person
+
+    private::Name :str= "John"
+    private::Age :int= 30
+
+    func getName(?)
+    endfunc <- ?.private::Name
+
+endclass
+
+Nicholas := Person()
+Name := Nicholas.getName()

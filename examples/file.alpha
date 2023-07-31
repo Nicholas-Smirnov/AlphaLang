@@ -1,0 +1,19 @@
+class Person
+
+    private::Name := "John"
+    private::Age := 25
+
+    func getStats(??)
+        stats :array= [??.private::Name, ??.private::Age]
+    endfunc <- stats
+
+endclass
+
+p1 := Person()
+x :array= p1.getStats()
+
+for stat in x
+    y :str= stat
+    log y
+    appendFile("test.txt", y + "\n")
+end
